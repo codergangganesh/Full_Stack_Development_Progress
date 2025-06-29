@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: large;
+            width: 210mm;
+            margin: auto;
+            background-color: #fffaf0;
+        }
+
+        h2 {
+            color: blueviolet;
+            margin: 30px;
+            border-left: 5px solid paleturquoise;
+            padding-left: 15px;
+        }
+
+        fieldset {
+            background-color: bisque;
+            border-radius: 2cap;
+            border: none;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 30px;
+            
+        }
+
+        .project-card {
+            display: flex;
+            align-items: center;
+            background-color: rgb(248, 246, 243);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+        }
+
+        .project-card:hover {
+            background-color: rgb(203, 238, 250);
+            transform: scale(1.02);
+        }
+
+        .project-card img {
+            width: 160px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .project-info h3 {
+            color: darkblue;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .project-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-card img {
+                margin: 0 0 15px 0;
+                width: 80%;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        button{
+            padding: 5px;
+            color:white;
+            background-color: rgb(32, 163, 245);
+            border: none;
+            border-radius: 1cap;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Projects Section -->
+    <section id="projects">
+        <fieldset>
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <a href="https://codergangganesh.github.io/D-MART-DATA-ANALYSIS/" target="_blank">
+                    <div class="project-card">
+                        <img src="./d-mart-analysis.png" alt="D-Mart Project">
+                        <div class="project-info">
+                            <h3>D-Mart Sales Dashboard</h3>
+                            <p>Power BI dashboard showing analysis of D-Mart's sales performance and KPIs.</p>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://codergangganesh.github.io/Lee-AI-Bot/" target="_blank">
+                    <div class="project-card">
+                        <img src="./jarvis.png" alt="AI Bot">
+                        <div class="project-info">
+                            <h3>Student AI Bot</h3>
+                            <p>Custom chatbot using Dialogflow to assist students with academic queries.</p>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://codergangganesh.github.io/Student_Chat_Bot/" target="_blank">
+                    <div class="project-card">
+                        <img src="./chatbot.avif" alt="Chat GPT">
+                        <div class="project-info">
+                            <h3>Student Chat GPT</h3>
+                            <p>A GPT-style chat interface customized for student interaction and helpdesk.</p>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./Portfolio.html" target="_blank">
+                    <div class="project-card">
+                        <img src="./profile.jpeg" alt="Portfolio">
+                        <div class="project-info">
+                            <h3>Portfolio Website</h3>
+                            <p>Fully responsive personal portfolio website showcasing skills, projects, and profiles.</p>
+                            <button>View Project</button>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </fieldset>
+    </section>
+</body>
+
+</html>

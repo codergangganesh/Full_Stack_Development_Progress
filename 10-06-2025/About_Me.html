@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        #body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: large;
+            width: 210mm;
+            height: 297mm;
+            margin: auto;
+        }
+
+        .aboutme {
+            border-radius: 10cap;
+            background-color: rgb(248, 204, 151);
+            text-align: left;
+            margin: 40px;
+            font-size: 120%;
+            border-left: 5px solid white;
+            padding: 10px;
+            margin-left: 30px;
+        }
+
+        .aboutme:hover {
+            background-color: lightblue;
+            transform: scaleX(1.10);
+            transition: 0.3s;
+        }
+
+        fieldset {
+            background-color: bisque;
+            border-radius: 1cap;
+        }
+
+        img {
+            border-radius: 50%;
+            height: 400px;
+            width: 400px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .media-tag-usage {
+            padding: 20px;
+            background-color: bisque;
+            font-family: "Times New Roman", Times, serif;
+            border-radius: 10px;
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .Media-tag-usage {
+                background-color: bisque;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .Media-tag-usage {
+                background-color: bisque;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .Media-tag-usage {
+                background-color: bisque;
+            }
+        }
+
+        .personal-information-table {
+            display: flex;
+            flex: 1 1 0;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .personal-information-table table {
+            width: 100%;
+        }
+
+        .personal-information-table td {
+            padding: 10px;
+            background-color: bisque;
+            vertical-align: top;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .personal-info-paragraph {
+            width: 300px;
+        }
+
+        .soft-skills {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .media-tag-usage {
+                background-color: lightgrey;
+                font-size: 100%;
+                padding: 15px;
+            }
+
+            img {
+                height: 250px;
+                width: 250px;
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .personal-information-table {
+                display: block;
+                text-align: center;
+            }
+
+            .personal-info-paragraph {
+                width: auto;
+                font-size: 90%;
+            }
+
+            .soft-skills {
+                font-size: 90%;
+                padding: 10px;
+            }
+
+            .aboutme {
+                font-size: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <fieldset>
+        <h2 class="aboutme">About Me </h2>
+        <div class="profile-container">
+            <a href="../06-06-2025/Portfolio.html"><img src="./ganesh.jpg" alt="Profile Image"></a>
+            <div class="media-tag-usage">
+                <h3>Front-End Developer | Designer</h3>
+                <p>I am an aspiring front-end developer passionate about creating visually stunning and interactive web
+                    experiences. My expertise includes HTML, CSS, and a growing knowledge of JavaScript.</p>
+                <p>I am currently refining my skills in responsive design, CSS effects, and structured layout techniques
+                    to make my designs more professional and user-friendly.</p>
+            </div>
+        </div>
+
+        <div class="personal-information-table">
+            <table>
+                <tr>
+                    <td>
+                        <p><b>Personal Introduction</p></b>
+                        <p class="personal-info-paragraph">Fuelled by a passion for designing compelling web
+                            experiences.
+                            I have a deep desire to excel and continuously improve my work.</p>
+                    </td>
+                    <td><br>
+                        <b></b><strong class="personal-info-paragraph">Technical Skills</strong></b>
+                        <ul>
+                            <li>HTML & CSS Proficiency</li>
+                            <li>Responsive Design & Layout</li>
+                            <li>CSS Effects & Transitions</li>
+                            <li>Sticky Navigation & Dropdown Menus</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="soft-skills">
+            <table>
+                <tr>
+                    <h4 style="margin-left: 10px;">Soft Skills</h4>
+                    <ol>
+                        <li><b>Creativity:</b> Ability to design visually appealing and user-friendly interfaces</li>
+                        <li><b>Problem-Solving:</b> Finding innovative solutions to improve user experience and
+                            responsiveness.</li>
+                        <li><b>Communication:</b> Expressing ideas clearly and collaborating effectively with teams.
+                        </li>
+                        <li><b>Attention to Detail:</b> Ensuring precision in code structure, layout, and design
+                            aesthetics.</li>
+                        <li><b>Adaptability:</b> Staying updated with new trends and technologies to refine development
+                            skills.</li>
+                    </ol>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+</body>
+
+</html>
+
+
