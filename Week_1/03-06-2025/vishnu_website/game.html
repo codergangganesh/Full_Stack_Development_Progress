@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GameHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: black;
+    }
+    .card-body {
+      text-align: center;
+    }
+    #u{
+      width: 100%;
+      background-color: rgb(229, 200, 200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .card:hover{
+      transform: scale(1.05);
+      transition: 0.7s;
+    }
+    #o{
+        background-color: rgb(243, 227, 244);
+        border-radius: 5%;
+    }
+  </style>
+</head>
+
+<body id="h">
+  <div class="container-fluid" id="u">
+    <div>
+      <h1>GameHub</h1>
+      <p>Play your favorite games anytime, for free!</p>
+    </div>
+
+    <form class="d-flex" action="https://www.crazygames.com/search">
+      <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search" />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#h">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.crazygames.com/c/action">Action games</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.crazygames.com/t/car">driving game</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://itch.io/games/tag-indie">indie games</a></li>
+          <li class="nav-item"><a class="nav-link" href="./login1.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img
+            src="data:image/webp;base64,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"
+            class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Flappy Bird</h5>
+            <a href="https://flappybird.io" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img
+            src="https://th.bing.com/th/id/OIP.jg11dLW2aLucmjCfpRHYewHaHa?w=208&h=208&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">2040</h5>
+            <a href="https://play2048.co" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img
+            src="data:image/webp;base64,UklGRnYFAABXRUJQVlA4IGoFAAAQKQCdASroAOoAPp1OpEwlpKQiJVbouLATiWVu4XCBAn184vHs7QhnP1ec/I36vfKV9PfpY8zvmuadRTvfmuan9B9wXi7/WbwGvQA80vRtPb5LxpXJjSuTGlcmNK5MaVyY0rkxpXJjITCXg1x1VJYvtZKY0qoj81ZG8IiA4m9I29siQpxJLE6z6RDsKalborxSa7sFwhp0EnJDigNgNAtkNPK9uI2A303HVrd/56GS8F2l38fXz/yaeEGZjZpWcY3MAKdtYeElxqpW6LR1UQx26EcqqKQIfCWdzVScO8s0AHrTJpKGS3OoScdkxcH2dVggVfmenDi/cUDKWSvAgMzOn5Rabo63y3Z32NQZ0A2GR8uP5W6NptpQ57Y0j8tUe1v7V5wf+mcfSuTGlcF0FyA4epAb4wU5jSuTGldUi5MaVyY0rkxpXJhUEfsq8bCj9lAAAP79XMn/9B+mftGcf3ShAWgDfEAAACP+vdXK3Jg4/vjWYar14GVr7T1kMDWWolQTh+2ZoTZrP+nmf78RAfC/xkaGUc4guNv3P/S2cvpSEInyCF2Rwg2JClNvX1ZFRJbsEc8DREvFKtfVTf+HELmVQIt/RpXmwy6+BjsDOzq9XYqcCKtFxujBfgBt+5rFjxRlOUrdxctc1fC0s2aod7DKrHss3LA1Iko49FR40/fLY7Kb7DTz8jzDLQANwe5DNUVs35PT4HF1iZMJaf+94rkAeO16/YihJUfUOfxLM1yT2gsL33wkENXRsPWSHJ6a+dhJ+HCJXRCkOF2zubrKs3/2uSCUdI97NrsqKKD0TOrXnVtQL9VAPwSZJLC8eJrKgVceCcSH9rro82uj851h5Brx/GQir8DwR8nkoSB87HBdvNIMtT4wWEw2m+dKa1eu3GjROE3Sl6dlqsEFipShtpa0vHM4Jf34J+MFOU/+3xWcHslWBQhLWVQ6M7603vaPP+F6AJaUZ5KOuNwzv3VSYezgy6FjxeUWQPyToBjx0a1CMLyEBeCtKArVQknro/PAT71jAK0DMlTl27SRdH9dsKwEh2wwgvPmoeBqNNldILaE0L0NzXcK0mBT1fyBtQE3g52/qyB5NA9FZ3jHVFjK2UQ1AiT+XQ0Cr91ugqsvpmmIW7z/cu/eHgXXn2zCqFZWcnD8hLxh7nTUVjeiFlzlDNG1g4ldiNPbXWWdb5MFuBeQ1xz8IWUB36T6pvhmeO8rFOHcj6firn50VZWHk4wbA3x3HLRRpU8SLLvo0GfpnZpgf8J2x1K6gDjnq2EWJ+Gj6kv1LEbSpmLB+y58uzzcN5TCpVzV5D+LAL+XXl4ZGKs5O6NqEosOv3u8bnhPYK9svUzOXr3WUd3HnkImDPbjaSijOIgYAhsNfUJtJf0SOHUow65M9mmsenY+/+bQSqOq6cAXKacRT7O5TQCH6K46bkuIyb9GFoB13qG/6UDsK83iNZNT16mQdVuDycsimP8DOaBjOR7C++ABfBDt0dZTJZnud6E3XNYcZlkRPS+IzaaycQm0nQsAypxxudUcdXfdK8vsHwbP6Zw2yjG+WHCU4JAz+zmQ+Vqm6BVfscpqF0W8y6u/qhTDgj/KMX58E2oJwb/oy6jebS2CqiAfU4FS6wND35CkfviF77KVpisICWBBKoojd7MKb3nn6G6jWzVFFOpbm5n3zM4rYUzzdl6QkChyUeZe03lT+1K9yGdy/0BSrcGb/Yt4VUfHGzcqFiyKqINW6P1TpLldtvulNAu/DPNsklgga/53zSelLPenzHiYS17VVyp4pdUfB7nUG644+wUv0r/Xpqxr9mvpKz84IPz0W+GDKu/DAxc9YNGKlAAl2rmgAMU4Lo4AAAA="
+             alt="">
+          <div class="card-body">
+            <h5 class="card-title">Dino game</h5>
+            <a href="https://chromedino.com" class="btn btn-primary">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th/id/OIP.bIbukPYMOvBFetMa4badIAHaHa?w=199&h=199&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3 class=" alt="Bird Jump">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Chess</h5>
+            <a href="https://www.chess.com/play/computer" class="btn btn-primary mt-auto">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th/id/OIP.fFYOzTJGXcd6JqxODMm4wAHaHa?w=187&h=197&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="card-img-top" alt="Bird Jump">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Poker</h5>
+            <a href="https://www.247freepoker.com" class="btn btn-primary mt-auto">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://th.bing.com/th/id/OIP._oR-PlKElfC0yBGL32WACQHaHa?w=173&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" class="card-img-top" alt="Bird Jump">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Pac Man</h5>
+            <a href="https://www.pacman1.net" class="btn btn-primary mt-auto">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+<footer id="o">
+    <hr style=" border: 5px solid rgb(229, 224, 224);">
+
+    <div id="contact">
+      <center>
+        <h2>Contact</h2>
+        <hr width="100px" style="border: 2px solid" >
+      </center>
+    </div>
+    <h3>For queries mail:</h3>
+    <h4>📧: vivvishnu321@gmail.com</h4>
+    <hr>
+    <center>
+        <p>&copy; 2025 GameHub. Built for fun.</p>
+    </center>
+</footer>
+
+</html>

@@ -1,0 +1,224 @@
+.aboutme
+{
+margin: 30px;
+font-size: 120%;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.aboutme:hover{
+background-color: lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+section h2{
+color: aqua;
+border-left:5px solid paleturquoise;
+padding: 10px;
+margin-bottom: 20px;
+margin: 30px;
+} 
+.skills-list, .Education-grid,.contact-grid,.project-grid,.P
+{
+margin: 20px;
+display:grid;
+grid-template-rows: repeat(auto-fit,minmax(50px,2fr));
+gap: 1rem;
+margin-bottom: 0rem;
+margin: black;
+
+}
+
+.skills, .Education , .contact, .projects {
+
+background:rgb(241, 194, 137);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 10 10px 4px grey (10, 10, 10, 0.1);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: center;
+
+}
+
+
+.projects:hover{
+    background-color: orange;
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.Profiles{
+background-color:bisque;
+padding: 5px;
+border-radius: 10px;
+box-shadow: 10 10px 4px grey (10, 10, 10, 0.1);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: center;
+text-align: left;
+margin: 30px;
+}
+
+.Profiles:hover{
+background-color:lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+.skills:hover {
+background-color: orange;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.Education-hove:hover{
+background-color:lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+
+#body{
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
+width: 210mm; 
+height: 297mm;
+margin: auto;
+}
+
+nav{
+text-align: left;
+padding: 10px;
+position: sticky;
+
+}
+nav a{
+text-decoration:red;
+color: red;
+}
+
+
+
+
+#center-button{
+background-color:aqua;
+border-radius: 2mm;
+padding: 0.2cm;
+
+}
+#center-button:hover{
+background-color:lime;
+border-radius: 2mm;
+padding: 0.2cm;
+transform: scale(1.2);
+transition: 0.3s ease;
+
+}
+
+img:hover{
+    background-color: rgb(219, 219, 217);
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.img-codolio{
+border-color: red;
+text-align: center;
+}
+
+.skill-hove:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.projects-hove:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.contact_me:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.5s ease;
+
+}
+
+.submit:hover{
+    background-color:#ff3c00;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+input:hover {
+    background-color:#f3f0ef;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+textarea:hover{
+background-color:#f3f0ef;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+.hove-about:hover{
+    background-color:hsl(60, 3%, 6%);
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+
+}
+
+#name:hover{
+    transform: scale(1.2);
+transition: 0.3s ease;
+
+}
+
+.image-boxshadow{
+box-shadow: 10px 20px 10px rgba(14, 2, 2, 0.5);
+
+}
+
+.name-shadow{
+box-shadow:5px 10px 10px rgb(213, 250, 171);
+}
+.menu-container{
+            display: inline-block;
+
+        }
+        .menu-button{
+            background-color: black;
+            color: #f3f0ef;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .menu-content{
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 150px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+        .menu-content a{
+            color: azure;
+            padding: 10px 15px;
+            display: block;
+        }
+        .menu-content a:hover{
+            background-color: black;
+        }
+        .menu-container:hover .menu-content{
+            display: inline-block;
+        }

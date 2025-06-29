@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+
+.menu-container{
+            display: inline-block;
+
+        }
+        .menu-button{
+            background-color: black;
+            color: #f3f0ef;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .menu-content{
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 150px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+        .menu-content a{
+            color: azure;
+            padding: 10px 15px;
+            display: block;
+        }
+        .menu-content a:hover{
+            background-color: black;
+        }
+        .menu-container:hover .menu-content{
+            display: inline-block;
+        }
+.aboutme
+{
+margin: 30px;
+font-size: 120%;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.aboutme:hover{
+background-color: lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+section h2{
+color: aqua;
+border-left:5px solid paleturquoise;
+padding: 10px;
+margin-bottom: 20px;
+margin: 30px;
+text-align: left;
+} 
+.skills-list, .Education-grid,.contact-grid,.project-grid,.P
+{
+margin: 20px;
+display:grid;
+grid-template-rows: repeat(auto-fit,minmax(50px,2fr));
+gap: 1rem;
+margin-bottom: 0rem;
+margin: black;
+
+}
+
+.skills, .Education , .contact, .projects {
+
+background:rgb(241, 194, 137);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 10 10px 4px grey (10, 10, 10, 0.1);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: center;
+
+}
+
+
+.projects:hover{
+    background-color: orange;
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.Profiles{
+background-color:bisque;
+padding: 5px;
+border-radius: 10px;
+box-shadow: 10 10px 4px grey (10, 10, 10, 0.1);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-align: center;
+text-align: left;
+margin: 30px;
+}
+
+.Profiles:hover{
+background-color:lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+.skills:hover {
+background-color: orange;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.Education-hove:hover{
+background-color:lightgreen;
+border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+
+#body{
+font-family: Arial, Helvetica, sans-serif;
+font-size: large;
+width: 210mm; 
+height: 297mm;
+margin: auto;
+}
+
+nav{
+text-align: right;
+padding: 10px;
+
+
+}
+nav a{
+text-decoration:red;
+color: red;
+}
+
+
+
+
+#center-button{
+background-color:aqua;
+border-radius: 2mm;
+padding: 0.2cm;
+
+}
+#center-button:hover{
+background-color:lime;
+border-radius: 2mm;
+padding: 0.2cm;
+transform: scale(1.2);
+transition: 0.3s ease;
+
+}
+
+img:hover{
+    background-color: rgb(219, 219, 217);
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.img-codolio{
+border-color: red;
+text-align: center;
+}
+
+.skill-hove:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.projects-hove:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+.contact_me:hover{
+    background-color:lightgreen;
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.5s ease;
+
+}
+
+.submit:hover{
+    background-color:#ff3c00;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+input:hover {
+    background-color:#f3f0ef;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+textarea:hover{
+background-color:#f3f0ef;
+transform: scale(1.2);
+transition: 0.3s ease;
+}
+
+
+.hove-about:hover{
+    background-color:hsl(60, 3%, 6%);
+    border-radius: 2cap;
+transform: scale(1.2);
+transition: 0.3s ease;
+
+}
+
+.image-boxshadow{
+box-shadow: 10px 20px 10px rgba(14, 2, 2, 0.5);
+
+}
+
+
+
+.menu-container {
+display: inline-block;
+position: relative;
+right:730px;
+}
+
+.menu-button {
+background-color: lightsteelblue;
+color: #f3f0ef;
+padding: 10px 15px;
+border-radius: 5px;
+cursor: pointer;
+
+}
+
+.menu-content {
+display: none;
+position: absolute;
+top: 90%; 
+left: 10%;
+background-color:white;
+width: 150px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
+text-align: center; 
+}
+
+.menu-content a {
+color:blue;
+padding: 10px 15px;
+display: block;
+text-align: center;
+}
+
+.menu-content a:hover {
+transform: scale(1.2);
+transition: 0.5s ease;
+background-color: #c7b4f3;
+border-radius: 2cap;
+}
+
+.menu-container:hover .menu-content {
+display: block;
+}
+.menu-content-hove:hover{
+    
+    transition: scaleX(0.5);
+    transform: 0.3s;
+    color: rgb(19, 19, 223);
+}
+
+
+</style>
+<body id="body">
+    <fieldset style="border-radius: 2cap; background-color:bisque;" class="fieldset-hove" class="container">
+
+
+
+
+                            <!--Navigation section-->
+<div class="sticky-element">                               
+<div >
+    <nav class="hove" style="text-align: right;">
+        <a href="#aboutme">About Me</a>
+        <a href="#Education">| Education </a>
+        <a href="#skills"> | Skills |</a>
+        <a href="#Projects">Projects |</a>
+        <a href="#contact">Contact</a>
+    
+ 
+
+<div class="menu-container">
+<div class="menu-button">&#9776;
+</div>
+<div class="menu-content">
+<a href="../10-06-2025/About_Me.html" class="menu-content-hove">About Me</a>
+<a href="../10-06-2025/Profiles.html" class="menu-content-hove">Profiles</a>
+<a href="../10-06-2025/Achivements.html" class="menu-content-hove">Achivements</a>
+<a href="../10-06-2025/Contact_Me.html" class="menu-content-hove">Contact Me</a>
+</div>
+</div>
+</div>
+
+
+
+                                <!--Image Section-->
+                <header style="border-radius: 9%;">
+                    <p><img src="ganesh.jpg" alt="" width="180" height="200" style="border-radius: 25%;" align="right" class="image-boxshadow"></p>
+                    <br><br><br>
+                     <b style="color:blue; font-size: 300%;" class="name-shadow">Mannam.Ganesh Babu</b>
+                </header>
+
+
+                <br><br><br>
+
+                                <!--About me section-->
+                <section ><br><br><br><br>
+                    <class id="aboutme">
+                    <h2 style="color: blueviolet; margin: 30px;" class="aboutme">About Me</h2>
+                    <p align="justify" style="margin: 30px;color:teal">My name is Mannam Ganesh Babu, and I recently completed my B.Tech at <b>Kalaignar Karunanidhi Institute of Technology.</b>
+                    During my college days, I built a strong foundation in <b>computer science</b>.
+                    I gained hands-on experience in <b>programming, software development</b> and <b>emerging technologies</b>.
+                    Problem-solving and leveraging technology to create efficient solutions excite me.</p>
+                    <p align="justify" style="color: teal; margin: 30px;">I am eager to apply my knowledge and learn from industry experts.
+                    My goal is to contribute to an organization that values innovation and growth. </p>
+                </class>
+                </section>
+
+                                <!--Profile section-->
+               <section>
+                <class id="Profiles">
+                    <section>
+                    <table width="70%" >
+                <tr>
+                  <h2 style="margin:30px; color: blueviolet;" class="Profiles">Profiles:</h2>
+                  <div class="skills-list">
+
+
+                  <td>
+                  <div class="skills" style="margin: 30px;"> <a href="https://www.linkedin.com/in/mannam-ganeshbabu-5a19ab291/"><img src="linkedin.jpg" alt="" style="height: 30px; width: 20%; border-radius: 50cap; text-align: center;" align ="left" class="image_codolio"></a>Linkedin</div>
+                  <div class="skills" style="margin: 30px;"><a href="https://www.codechef.com/users/ganeshbabu_54"><img src="codechef.jpg" alt="" style="height: 30px; width: 20%; border-radius: 50cap; text-align: center;" align ="left" class="image_codolio"></a>CodeChef</div>
+                  </td>
+                  <td>
+                  <div class="skills" style="margin: 30px;"> <a href="https://codolio.com/profile/Mannam_Ganesh_babu"><img src="codolio.png" alt="" style="height: 30px; width: 20%; border-radius: 50cap; text-align: center;" align ="left" class="image_codolio"></a>Codolio</div>
+                  <div class="skills" style="margin: 30px;"> <a href="https://github.com/codergangganesh"><img src="github.jpg" alt="" style="height: 30px; width: 20%; border-radius: 50cap; text-align: center;" align ="left" class="image_codolio"></a>github</div>
+                  
+                  </td>
+
+
+                  
+                  </div>
+                  </tr>
+                  </table>
+                  </section>
+                </class>
+                </section>
+              
+                            <!--Education section-->
+                <section>
+                    <class id="Education">
+                        <h2 style="margin: 30px; color: blueviolet;" class="Education-hove">Education:</h2>
+                        <div class="Education-grid">
+
+
+                        <div class="Education">
+                            <h3 style="text-align:center; font-weight:bolder">Diploma</h3>
+                        <p style="text-align: left; font-weight: bolder; color: blue;">Sri Ranganathat College</p>
+                        <p style="text-align: left;">DEPT : Electronics and communication Engineering</p>
+                        <p style="text-align: left; font-weight: bold;">CGPA : 9.65</p>
+                        </div>
+
+
+
+                        <div class="Education">
+                            <h3>Engineering</h3>
+                            <p style="width: 100%; text-align: left ; color: blue; font-weight: bold;">KIT-Kalaignarkarunanidhi Institute of Technology</p>
+                            <p style="text-align: left;">DEPT : Artificial Intelligence and Data Science</p>
+                            <a href="../Portfolio_Project.html/Portfolio/index.html" style="text-decoration:black">
+                            <p style="text-align: left; font-weight: bold; color: black;"><a href="https://portal.kitcbe.com/index.php/Results" style="text-decoration: none; color:black;">CGPA : 8.26</p></a>
+                            </a>
+                        </div>
+                        </div>
+                
+                    </class>
+                </section>
+
+
+                <!--Skill section-->
+                <section>
+                <class id="skills">
+                    <section>
+                    <table width="70%" >
+                        <tr>
+                  <h2 style="margin:30px; color: blueviolet;" class="skill-hove">skills:</h2>
+                  <div class="skills-list">
+                <td>
+                  <div class="skills" style="margin: 30px; text-align: center; .Box:hover{transform: scaleX(5); transition: 5s;}">DSA</div>
+                  <div class="skills"  style="margin: 30px;">PowerBI</div>
+                </td> 
+
+
+                  <td>
+                  <div class="skills" style="margin: 30px;">DBMS</div>
+                  <div class="skills" style="margin: 30px; width: 50%;">Data Science</div>
+                  </td>
+
+
+                  <td>
+                  <div class="skills" style="margin: 30px;">Python</div>
+                  <div class="skills" style="margin: 30px;">HTML,CSS</div>
+                  </td>
+                  </div>
+                  </tr>
+                  </table>
+                  </section>
+
+
+                            <!--Project section-->
+                  <section>
+                    <class id="Projects" >
+                        <h2 style="color: blueviolet;" class="projects-hove">Projects</h2>
+                    <div class="project-grid">
+                            
+                        <a href="https://codergangganesh.github.io/D-MART-DATA-ANALYSIS/" style="text-decoration: none;">
+                            <div class="projects" style="width: 10cap; width: 40%; color: black;">
+                                D-Mart Dashboard
+                            </div>
+                        </a>
+
+                        <a href="https://codergangganesh.github.io/Lee-AI-Bot/" style="text-decoration: none;">   
+                            <div class="projects" style="width: 10cap; width:40%; color: black;">
+                                Student_AI-BOT
+                            </div>
+                        </a> 
+
+                        <a href="https://codergangganesh.github.io/Student_Chat_Bot/" style="text-decoration: none;">
+                            <div class="projects" style="width: 40%; color: black;">
+                               Chat-GPT
+                            </div>
+                        </a>
+                        <a href="./Portfolio.html" style="text-decoration: none;">
+                            <div class="projects" style="width: 40%; color: black;">
+                               Portfolio
+                            </div>
+                        </a>
+                            
+                    </class>
+                    </div>
+                  </section>
+
+
+                        <!--Contact me section-->
+                <section>
+                    <class id="contact">
+                        <h2 style="color: blueviolet;" class="contact_me">Contact Me</h2>
+
+                        <fieldset style="margin: 30px; border-radius: 8cap;">
+
+
+                        <div class="contact-grid">
+                            <div class="contact">
+                                <label for="Fullname">Full Name</label><br><br>
+                                <input type="text"  id="Fullname" placeholder="     Enter your Full Name" style="border-radius: 5cap;">
+                            </div>
+
+
+                            <div class="contact">
+                                <label for="Email">E-mail</label><br><br>
+                                <input type="email"  id="Email" placeholder="          Enter your Mail" style="border-radius: 5cap;">
+                            </div>
+                        </div>
+
+                        <div class="contact" style="margin: 30px;">
+                                <label for="FeedBack" style="color: blue;">FeedBack</label><br><br>
+                                <textarea name="FeedBack" id="FeedBack" placeholder="  Enter Your FeedBack" rows="10" cols="80" style="border-radius: 2cap; background-color: lightcyan;"></textarea>
+                            </div>
+
+
+                            <!--Button section-->
+                            <a href="./Portfolio.html">   
+                            <center>
+                             <button id="center-button" width="2px">
+                                    Submit
+                                </button>
+                            </center>
+                            </a>
+                        
+                        
+
+                    </class>
+                        </fieldset>
+</fieldset>
+</body>
+</html>
+
+<!--position ,important ,type -->
