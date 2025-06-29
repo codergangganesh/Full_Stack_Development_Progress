@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Trending</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <span>BookStore</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html" class="active">Trending</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Trending Books</h1>
+            <p>Discover the most popular books of the season</p>
+        </section>
+
+        <section class="trending-books">
+            <div class="book-grid">
+                <div class="book-card">
+                    <img src="./images/books/1.webp" alt="Book 1">
+                    <h3>The Silent Patient</h3>
+                    <p>By Alex Michaelides</p>
+                    <span class="price">$17.99</span>
+                    <div class="book-stats">
+                        <span class="rating">4.8 ★</span>
+                        <span class="sales">12K+ Sales</span>
+                    </div>
+                    <button onclick="addToCart('The Silent Patient')">Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="./images/books/3.jpeg" alt="Book 2">
+                    <h3>The Midnight Library</h3>
+                    <p>By Matt Haig</p>
+                    <span class="price">$15.99</span>
+                    <div class="book-stats">
+                        <span class="rating">4.7 ★</span>
+                        <span class="sales">8K+ Sales</span>
+                    </div>
+                    <button onclick="addToCart('The Midnight Library')">Add to Cart</button>
+                </div>
+                <div class="book-card">
+                    <img src="./images/books/4.webp" alt="Book 3">
+                    <h3>The Push</h3>
+                    <p>By Ashley Audrain</p>
+                    <span class="price">$14.99</span>
+                    <div class="book-stats">
+                        <span class="rating">4.6 ★</span>
+                        <span class="sales">6K+ Sales</span>
+                    </div>
+                    <button onclick="addToCart('The Push')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91 76708 95485</p>
+                <p><i class="fas fa-envelope"></i> mannamganeshbabu8@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BookStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(bookName) {
+            alert(`${bookName} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>

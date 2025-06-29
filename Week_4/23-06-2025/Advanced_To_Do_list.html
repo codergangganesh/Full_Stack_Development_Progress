@@ -1,0 +1,232 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #e0eafc, #cfdef3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #0f0404dd;
+      backdrop-filter: blur(8px);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #f7fafd;
+      margin-bottom: 30px;
+    }
+
+    .input-wrapper {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .input-wrapper input {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .input-wrapper input:focus {
+      border-color: #90c7ec;
+      outline: none;
+    }
+
+    .input-wrapper button {
+      padding: 12px 16px;
+      border: none;
+      background: #90c7ec;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .input-wrapper button:hover {
+      background: #217dbb;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #01010a;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out;
+      color: white;
+    }
+
+    li:hover {
+      transform: scale(1.015);
+    }
+
+    .delete-btn {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      color: #e74c3c;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .delete-btn:hover {
+      transform: rotate(10deg);
+      color: #c0392b;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #e21515;
+    }
+
+    .task-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    input[type="checkbox"] {
+      accent-color: #3498db;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>To-Do List</h2>
+    <div class="input-wrapper">
+      <input type="text" id="taskinput" placeholder="What do you want to do today?">
+      <button id="add">Add</button>
+      <button onclick="deleteAll()">Clear All</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+  <script>
+    const taskinput = document.getElementById("taskinput");
+    const taskList = document.getElementById("taskList");
+    const addBtn = document.getElementById("add");
+
+    let list = [];
+
+    window.onload = function () {
+      list = JSON.parse(localStorage.getItem("list")) || [];
+      list.forEach(task => addTask(task));
+    };
+
+    addBtn.addEventListener("click", function () {
+      if (taskinput.value.trim() === "") return;
+      list.push(taskinput.value);
+      localStorage.setItem('list', JSON.stringify(list));
+      addTask(taskinput.value);
+      taskinput.value = "";
+    });
+
+    function addTask(task) {
+      const li = document.createElement("li");
+      li.innerText = task;
+
+      const deleteBtn = document.createElement("button");
+      deleteBtn.innerText = "❌";
+      deleteBtn.className = "delete-btn";
+
+      deleteBtn.addEventListener("click", function () {
+        taskList.removeChild(li);
+        removeindex(task);
+      });
+
+      li.appendChild(deleteBtn);
+      taskList.appendChild(li);
+    }
+
+    function deleteAll() {
+      taskList.innerHTML = "";
+      list = [];
+      localStorage.setItem('list', JSON.stringify(list));
+    }
+
+    function removeindex(task) {
+      const index = list.indexOf(task);
+      if (index > -1) {
+        list.splice(index, 1);
+      }
+      localStorage.setItem('list', JSON.stringify(list));
+    }
+    taskinput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        const taskValue = taskinput.value.trim();
+        if (taskValue === "") return;
+        list.push(taskValue);
+        localStorage.setItem("list", JSON.stringify(list));
+        addTask(taskValue);
+        taskinput.value = "";
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="grandparent">
+    <div id="parent">
+      <button id="child">Click Me</button>
+    </div>
+  </div>
+  <script>
+  document.getElementById("grandparent").addEventListener("click", () => {
+    console.log("Grandparent clicked");
+  });
+  
+  document.getElementById("parent").addEventListener("click", () => {
+    console.log("Parent clicked");
+  });
+  
+  document.getElementById("child").addEventListener("click", () => {
+    console.log("Child clicked");
+  });
+  
+</script>  
+</body>
+</html> -->

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Event Types Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .box {
+      width: 150px;
+      height: 150px;
+      background: lightblue;
+      margin: 10px 0;
+    }
+
+    .scroll-box {
+      height: 100px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+    }
+
+    .drag-target {
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin: 10px;
+    }
+
+    .drop-zone {
+      width: 200px;
+      height: 200px;
+      border: 2px dashed #666;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>JavaScript Event Types Demo</h1>
+
+  <div class="section" id="keyboard">
+    <h2>Keyboard Events</h2>
+    <input type="text" placeholder="Type something" id="keyboardInput">
+  </div>
+
+  <div class="section" id="form">
+    <h2>Form Events</h2>
+    <form id="demoForm">
+      <input type="text" id="formInput" placeholder="Change me" /><br />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </div>
+
+  <div class="section" id="window">
+    <h2>Window Events</h2>
+    <p>Resize the window or scroll the page to trigger events.</p>
+  </div>
+
+  <div class="section" id="clipboard">
+    <h2>Clipboard Events</h2>
+    <input type="text" value="Copy/Cut/Paste here" id="clipboardInput">
+  </div>
+
+  <div class="section" id="dragdrop">
+    <h2>Drag and Drop Events</h2>
+    <div class="drag-target" id="dragItem" draggable="true">Drag me</div>
+    <div class="drop-zone" id="dropZone">Drop here</div>
+  </div>
+
+  <div class="section" id="touch">
+    <h2>Touch Events (Try on a touchscreen)</h2>
+    <div class="box" id="touchBox">Touch me</div>
+  </div>
+
+  <div class="section" id="media">
+    <h2>Media Events</h2>
+    <video id="video" width="320" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <div class="section" id="animation">
+    <h2>Animation & Transition Events</h2>
+    <div id="animateBox" style="width:100px;height:100px;background:green;transition:all 1s;"></div>
+    <button onclick="document.getElementById('animateBox').style.width='200px';">Animate</button>
+  </div>
+
+  <div class="section" id="misc">
+    <h2>Miscellaneous Events</h2>
+    <div class="scroll-box" id="scrollBox">Scroll me<br /><br /><br />More content<br /><br /><br />End</div>
+    <div class="box" id="pointerBox">Pointer Events</div>
+  </div>
+
+  <div class="section" id="mouse">
+    <h2>Mouse Events</h2>
+    <div class="box" id="mouseBox">Hover/Click/Move</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => console.log("DOM fully loaded"));
+
+    // Keyboard
+    document.getElementById("keyboardInput").addEventListener("keydown", e => console.log("KeyDown:", e.key));
+    document.getElementById("keyboardInput").addEventListener("keyup", e => console.log("KeyUp:", e.key));
+    document.getElementById("keyboardInput").addEventListener("keypress", e => console.log("KeyPress:", e.key));
+
+    // Form
+    const form = document.getElementById("demoForm");
+    form.addEventListener("submit", e => { e.preventDefault(); console.log("Form Submitted"); });
+    form.addEventListener("reset", () => console.log("Form Reset"));
+    document.getElementById("formInput").addEventListener("input", e => console.log("Input:", e.target.value));
+    document.getElementById("formInput").addEventListener("change", e => console.log("Change:", e.target.value));
+    document.getElementById("formInput").addEventListener("focus", () => console.log("Focus"));
+    document.getElementById("formInput").addEventListener("blur", () => console.log("Blur"));
+    form.addEventListener("focusin", () => console.log("FocusIn"));
+    form.addEventListener("focusout", () => console.log("FocusOut"));
+
+    // Window
+    window.addEventListener("load", () => console.log("Page loaded"));
+    window.addEventListener("resize", () => console.log("Window resized"));
+    window.addEventListener("scroll", () => console.log("Window scrolled"));
+    window.addEventListener("beforeunload", e => {
+      e.preventDefault();
+      e.returnValue = '';
+    });
+
+    // Clipboard
+    const clip = document.getElementById("clipboardInput");
+    clip.addEventListener("copy", () => console.log("Copied"));
+    clip.addEventListener("cut", () => console.log("Cut"));
+    clip.addEventListener("paste", () => console.log("Pasted"));
+
+    // Drag and Drop
+    const dragItem = document.getElementById("dragItem");
+    const dropZone = document.getElementById("dropZone");
+    dragItem.addEventListener("dragstart", () => console.log("Drag Start"));
+    dragItem.addEventListener("dragend", () => console.log("Drag End"));
+    dropZone.addEventListener("dragenter", () => console.log("Drag Enter"));
+    dropZone.addEventListener("dragover", e => { e.preventDefault(); console.log("Drag Over"); });
+    dropZone.addEventListener("dragleave", () => console.log("Drag Leave"));
+    dropZone.addEventListener("drop", e => { e.preventDefault(); console.log("Dropped"); });
+
+    // Touch
+    const touchBox = document.getElementById("touchBox");
+    touchBox.addEventListener("touchstart", () => console.log("Touch Start"));
+    touchBox.addEventListener("touchend", () => console.log("Touch End"));
+    touchBox.addEventListener("touchmove", () => console.log("Touch Move"));
+    touchBox.addEventListener("touchcancel", () => console.log("Touch Cancel"));
+
+    // Media
+    const video = document.getElementById("video");
+    video.addEventListener("play", () => console.log("Play"));
+    video.addEventListener("pause", () => console.log("Pause"));
+    video.addEventListener("ended", () => console.log("Ended"));
+    video.addEventListener("volumechange", () => console.log("Volume Changed"));
+    video.addEventListener("timeupdate", () => console.log("Time Updated"));
+    video.addEventListener("loadeddata", () => console.log("Loaded Data"));
+
+    // Animation
+    const animateBox = document.getElementById("animateBox");
+    animateBox.addEventListener("transitionend", () => console.log("Transition Ended"));
+
+    // Misc
+    document.getElementById("scrollBox").addEventListener("scroll", () => console.log("Scroll Box Scrolled"));
+    const pointerBox = document.getElementById("pointerBox");
+    pointerBox.addEventListener("pointerdown", () => console.log("Pointer Down"));
+    pointerBox.addEventListener("pointerup", () => console.log("Pointer Up"));
+    pointerBox.addEventListener("pointermove", () => console.log("Pointer Move"));
+
+    // Mouse
+    const mouseBox = document.getElementById("mouseBox");
+    mouseBox.addEventListener("mouseenter", () => console.log("Mouse Enter"));
+    mouseBox.addEventListener("mouseleave", () => console.log("Mouse Leave"));
+    mouseBox.addEventListener("mouseover", () => console.log("Mouse Over"));
+    mouseBox.addEventListener("mouseout", () => console.log("Mouse Out"));
+    mouseBox.addEventListener("mousemove", () => console.log("Mouse Move"));
+    mouseBox.addEventListener("contextmenu", e => { e.preventDefault(); console.log("Right Clicked"); });
+  </script>
+
+</body>
+
+</html>

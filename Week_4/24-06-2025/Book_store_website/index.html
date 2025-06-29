@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      .dark-toggle {
+        background: none;
+        border: none;
+        color: #007bff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 1rem;
+        transition: color 0.3s;
+      }
+      .dark-toggle:hover {
+        color: #222;
+      }
+      body.dark-mode {
+        background: #181a1b;
+        color: #f1f1f1;
+      }
+      body.dark-mode header, body.dark-mode nav, body.dark-mode .logo, body.dark-mode .footer-content, body.dark-mode footer {
+        background: #232526 !important;
+        color: #f1f1f1 !important;
+      }
+      body.dark-mode .book-card, body.dark-mode .offer-card {
+        background: #232526 !important;
+        color: #f1f1f1 !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      }
+      body.dark-mode .cta-button.primary {
+        background: #007bff;
+        color: #fff;
+      }
+      body.dark-mode .cta-button.secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+      }
+      body.dark-mode .cta-button.primary:hover {
+        background: #0056b3;
+      }
+      body.dark-mode .cta-button.secondary:hover {
+        background: rgba(255,255,255,0.1);
+      }
+      body.dark-mode .footer-bottom {
+        background: #181a1b;
+        color: #aaa;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <span>BookStore</span>
+            </div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <button class="dark-toggle" onclick="toggleDarkMode()" title="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('images/hero/hero-bg.jpg');">
+            <div class="hero-content">
+                <h1>Discover Your Next Read</h1>
+                <p>Explore our curated collection of books that will take you on unforgettable journeys</p>
+                <div class="hero-buttons">
+                    <a href="categories.html" class="cta-button primary">Shop Now</a>
+                    <a href="trending.html" class="cta-button secondary">View Trending</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-books">
+            <div class="section-header">
+                <h2>Featured Books</h2>
+                <p>Our carefully selected collection of must-read books</p>
+            </div>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="./images/hero/1.webp" alt="1984">
+                        <div class="book-overlay">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>1984</h3>
+                        <p>By George Orwell</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 ★</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">$12.99</span>
+                            <span class="original-price">$15.99</span>
+                        </div>
+                        <button onclick="addToCart('1984')" class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="./images/hero/2.png" alt="To Kill a Mockingbird">
+                        <div class="book-overlay">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>To Kill a Mockingbird</h3>
+                        <p>By Harper Lee</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 ★</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">$14.99</span>
+                            <span class="original-price">$17.99</span>
+                        </div>
+                        <button onclick="addToCart('To Kill a Mockingbird')" class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="./images/hero/3.jpeg" alt="The Great Gatsby">
+                        <div class="book-overlay">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>The Great Gatsby</h3>
+                        <p>By F. Scott Fitzgerald</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 ★</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">$19.99</span>
+                            <span class="original-price">$24.99</span>
+                        </div>
+                        <button onclick="addToCart('The Great Gatsby')" class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-offers">
+            <h2>Special Offers</h2>
+            <div class="offer-grid">
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="images/hero/4.webp" alt="Summer Sale">
+                    </div>
+                    <div class="offer-content">
+                        <h3>Summer Sale</h3>
+                        <p>Get up to 30% off on selected books</p>
+                        <a href="categories.html" class="offer-button">Shop Now</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-image">
+                        <img src="./images/hero/5.webp" alt="New Releases">
+                    </div>
+                    <div class="offer-content">
+                        <h3>New Releases</h3>
+                        <p>Discover the latest books from your favorite authors</p>
+                        <a href="trending.html" class="offer-button">View Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BookStore</h3>
+                <p>BookStore is your gateway to the world of literature. We bring you the finest selection of books from all genres.</p>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 1-194 , Andhra Pradesh , 523225</p>
+                    <p><i class="fas fa-phone"></i> +91 76708 95485</p>
+                    <p><i class="fas fa-envelope"></i> mannamganeshbabu8@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BookStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart(bookName) {
+            alert(`${bookName} has been added to your cart!`);
+        }
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode') ? '1' : '0');
+        }
+        window.onload = function() {
+            if (localStorage.getItem('dark-mode') === '1') {
+                document.body.classList.add('dark-mode');
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Category Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <span>BookStore</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 id="categoryTitle">Loading...</h1>
+            <p>Explore books in this category</p>
+        </section>
+
+        <section class="category-books">
+            <div class="book-grid" id="booksContainer">
+                <!-- Books will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@bookstore.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BookStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get category from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        
+        // Update page title
+        document.getElementById('categoryTitle').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+
+        // Sample books data (in a real application, this would come from a database)
+        const books = {
+            'fiction': [
+                { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', price: 19.99, image: 'https://via.placeholder.com/200x300' },
+                { title: 'To Kill a Mockingbird', author: 'Harper Lee', price: 14.99, image: 'https://via.placeholder.com/200x300' },
+                { title: '1984', author: 'George Orwell', price: 12.99, image: 'https://via.placeholder.com/200x300' }
+            ],
+            'non-fiction': [
+                { title: 'Sapiens', author: 'Yuval Noah Harari', price: 16.99, image: 'https://via.placeholder.com/200x300' },
+                { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman', price: 18.99, image: 'https://via.placeholder.com/200x300' }
+            ],
+            'science': [
+                { title: 'A Brief History of Time', author: 'Stephen Hawking', price: 14.99, image: 'https://via.placeholder.com/200x300' },
+                { title: 'The Selfish Gene', author: 'Richard Dawkins', price: 13.99, image: 'https://via.placeholder.com/200x300' }
+            ],
+            'history': [
+                { title: 'Guns, Germs, and Steel', author: 'Jared Diamond', price: 15.99, image: 'https://via.placeholder.com/200x300' }
+            ],
+            'children': [
+                { title: 'Charlotte\'s Web', author: 'E.B. White', price: 10.99, image: 'https://via.placeholder.com/200x300' },
+                { title: 'The Cat in the Hat', author: 'Dr. Seuss', price: 8.99, image: 'https://via.placeholder.com/200x300' }
+            ]
+        };
+
+        // Load books for selected category
+        function loadBooks() {
+            const container = document.getElementById('booksContainer');
+            const categoryBooks = books[category];
+            
+            if (!categoryBooks) return;
+
+            categoryBooks.forEach(book => {
+                const bookCard = document.createElement('div');
+                bookCard.className = 'book-card';
+                bookCard.innerHTML = `
+                    <img src="${book.image}" alt="${book.title}">
+                    <h3>${book.title}</h3>
+                    <p>By ${book.author}</p>
+                    <span class="price">$${book.price.toFixed(2)}</span>
+                    <button onclick="addToCart('${book.title}')">Add to Cart</button>
+                `;
+                container.appendChild(bookCard);
+            });
+        }
+
+        // Initialize page
+        window.onload = function() {
+            loadBooks();
+        };
+
+        // Add to cart function
+        function addToCart(bookName) {
+            alert(`${bookName} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>

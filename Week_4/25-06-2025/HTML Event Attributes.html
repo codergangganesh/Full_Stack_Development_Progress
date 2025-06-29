@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Events Demo</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    div, p, input, select, button { margin-bottom: 20px; }
+    .hover-box {
+      padding: 10px;
+      background: lightgray;
+      width: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body onload="alert('Page loaded!')">
+
+  <h2>HTML Event Attributes Demo</h2>
+
+  <!-- 1. onclick -->
+  <button onclick="alert('Button clicked!')">Click Me</button>
+
+  <!-- 2. onchange -->
+  <select onchange="alert('Selection changed!')">
+    <option value="">Choose one</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+
+  <!-- 3. onmouseover -->
+  <div class="hover-box" onmouseover="this.style.backgroundColor='skyblue'">
+    Hover over me
+  </div>
+
+  <!-- 4. onmouseout -->
+  <div class="hover-box" onmouseout="this.style.backgroundColor='lightgray'">
+    Move mouse away
+  </div>
+
+  <!-- 5. onkeydown -->
+  <input type="text" placeholder="Type a key..." onkeydown="console.log('Key pressed: ', event.key)" />
+
+  <!-- 6. onfocus and onblur -->
+  <input type="text" placeholder="Focus me" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'" />
+
+  <!-- 7. onsubmit -->
+  <form onsubmit="alert('Form submitted!'); return false;">
+    <input type="text" required placeholder="Enter something" />
+    <input type="submit" value="Submit Form" />
+  </form>
+
+  <!-- 8. oninput -->
+  <input type="text" placeholder="Type to trigger oninput" oninput="console.log('Input:', this.value)" />
+
+  <!-- 9. ondblclick -->
+  <p ondblclick="alert('Double clicked!')">Double-click this paragraph</p>
+
+  <!-- 10. oncontextmenu -->
+  <div oncontextmenu="alert('Right-click detected!'); return false;">
+    Right-click me to trigger oncontextmenu
+  </div>
+
+  <!-- 11. onload (for image) -->
+  <img src="./" alt="Sample" onload="alert('Image loaded!')" />
+
+</body>
+</html>

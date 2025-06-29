@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+                <span>BookStore</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Get in Touch</h1>
+                <p>We're here to help! Connect with us through various channels.</p>
+            </div>
+        </section>
+
+        <div class="contact-wrapper">
+            <div class="contact-grid">
+                <!-- Contact Information Section -->
+                <div class="contact-info-section">
+                    <h2>Our Contact Information</h2>
+                    <div class="contact-info-grid">
+                        <!-- Location Card -->
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Store Location</h3>
+                                <p>1-194 , Andhra Pradesh , 523225</p>
+                                <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                                <p>Sunday: 10:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Phone Numbers</h3>
+                                <p><a href="tel:+91 76708 95485">+91 76708 95485</a></p>
+                                <p>Customer Support</p>
+                                <p>Orders & Returns</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:info@bookstore.com">mannamganeshbabu8@gmail.com</a></p>
+                                <p><a href="mailto:support@bookstore.com">kit27.ad303@gmail.com</a></p>
+                                <p><a href="mailto:orders@bookstore.com">orders@bookstore.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/bookstore" class="social-icon" title="Facebook"
+                                target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/bookstore" class="social-icon" title="Twitter"
+                                target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com/bookstore" class="social-icon" title="Instagram"
+                                target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com/company/bookstore" class="social-icon" title="LinkedIn"
+                                target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Contact Form</h2>
+                    <form id="enquiryForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" style="pointer-events: auto; position: relative; z-index: 2;"
+                                placeholder="Enter your full name" required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required
+                                style="pointer-events: auto; position: relative; z-index: 2;">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobilenumber">Phone Number</label>
+                            <input type="tel" id="mobilenumber" placeholder="Enter your phone number" required
+                                pattern="[0-9]{10}" style="pointer-events: auto; position: relative; z-index: 2;">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Subject of your enquiry" required
+                                style="pointer-events: auto; position: relative; z-index: 2;">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Enter your message"
+                                style="pointer-events: auto; position: relative; z-index: 2;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="newsletter" name="newsletter"
+                                    style="pointer-events: auto; position: relative; z-index: 2;">
+                                <label for="newsletter">Subscribe to our Website</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- WhatsApp Section -->
+                <div class="whatsapp-section">
+                    <h2>Chat with Us</h2>
+                    <div class="whatsapp-card">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="whatsapp-content">
+                            <h3>Get Instant Support</h3>
+                            <p>Chat with our customer support team via WhatsApp</p>
+                            <a href="https://web.whatsapp.com/ " class="whatsapp-button">
+                                <i class="fab fa-whatsapp"></i>
+                                Chat Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BookStore</h3>
+                <p>BookStore is your gateway to the world of literature. We bring you the finest selection of books from
+                    all genres.</p>
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 1-194 , Andhra Pradesh ,523225</p>
+                    <p><i class="fas fa-phone"></i> +91 76708 95485</p>
+                    <p><i class="fas fa-envelope"></i> mannamganeshbabu8@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BookStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+      
+          const form = document.getElementById("enquiryForm");
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const mobilenumber = document.getElementById("mobilenumber").value.trim();
+          const subject = document.getElementById("subject").value.trim();
+          const message = document.getElementById("message").value.trim();
+      
+          if (!/^\d{10}$/.test(mobilenumber)) {
+            alert("Please enter a valid 10-digit mobile number.");
+            return;
+          }
+      
+          const adminMessage =
+            "New BookStore enquiry:\n" +
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Phone: " + mobilenumber + "\n" +
+            "Subject: " + subject + "\n" +
+            "Message: " + message;
+      
+          const userMessage = "Hello " + name + "! 📚\nThanks for contacting BookStore. We'll get back to you shortly.";
+      
+          const baseUrl = "https://whatsbot.gkmapps.com/api/send";
+          const instance = "6858E5A3A2E48";
+          const token = "685840d88a2ca";
+      
+          function sendWhatsApp(toNumber, textMessage) {
+            const url = `${baseUrl}?instance_id=${instance}&access_token=${token}&number=91${toNumber}&type=text&message=${encodeURIComponent(textMessage)}`;
+            return fetch(url);
+          }
+      
+          const submitBtn = form.querySelector("button");
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Sending...`;
+      
+          Promise.all([
+            sendWhatsApp("7670895485", adminMessage), // Admin
+            sendWhatsApp(mobilenumber, userMessage)   // User
+          ])
+          .then(() => {
+            // Send email via Web3Forms
+            const web3formData = new FormData();
+            web3formData.append("access_key", "5db47d95-d49a-4380-b32e-15391f27c26c");
+            web3formData.append("name", name);
+            web3formData.append("email", email);
+            web3formData.append("phone", mobilenumber);
+            web3formData.append("subject", subject);
+            web3formData.append("message", message);
+      
+            return fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: web3formData
+            });
+          })
+          .then(res => res.json())
+          .then(data => {
+            if (data.success) {
+              alert("Message sent successfully! 📩");
+              form.reset();
+            } else {
+              console.error(data);
+              alert("Message sending failed. Please try again.");
+            }
+          })
+          .catch(err => {
+            console.error(err);
+            alert("message sent successfully via WhatsApp  for further enquiry please contact through WhatsApp");
+            form.reset();
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> Send Message`;
+          });
+        });
+      </script>
+      
+
+</body>
+
+</html>

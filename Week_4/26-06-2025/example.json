@@ -1,0 +1,15 @@
+{
+    "example": {
+      "name": "Ganesh",
+      "age": 20,
+      "city": "Endluru"
+    },
+    "person": {
+      "name": "Ganesh",
+      "age": 20,
+      "city": "Endluru",
+      "email": "ganesh@example.com",
+      "skills": ["HTML", "CSS", "JavaScript"],
+      "interests": ["Web Design", "Animations", "Interactive UI"]
+    }
+  }

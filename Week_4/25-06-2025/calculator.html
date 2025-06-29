@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            width: 300px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .screen {
+            color: #0c0404;
+            font-size: 2rem;
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 300px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #ccc;
+        }
+
+        .btn {
+            background: #e0e0e0;
+            border: none;
+            font-size: 1.5rem;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #d4d4d4;
+        }
+
+        .operator {
+            background: #f9a825;
+            color: #fff;
+        }
+
+        .operator:hover {
+            background: #f57f17;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input class="screen" id="display" readonly value="">
+        <div class="buttons">
+            <button class="btn" onclick="appendValues('7')" >7</button>
+            <button class="btn" onclick="appendValues('8')" >8</button>
+            <button class="btn" onclick="appendValues('9')" >9</button>
+
+            <button class="btn operator" onclick="appendValues('/')" >/</button>
+
+            <button class="btn" onclick="appendValues('4')" >4</button>
+            <button class="btn" onclick="appendValues('5')" >5</button>
+            <button class="btn" onclick="appendValues('6')" >6</button>
+
+            <button class="btn operator" onclick="appendValues('*')" >*</button>
+
+            <button class="btn " onclick="appendValues('1')" >1</button>
+            <button class="btn" onclick="appendValues('2')" >2</button>
+            <button class="btn" onclick="appendValues('3')" >3</button>
+
+            <button class="btn operator" onclick="appendValues('-')" >-</button>
+
+            <button class="btn" onclick="appendValues('0')" >0</button>
+            <button class="btn" onclick="appendValues('.')" >.</button>
+
+            <button class="btn operator" onclick="appendValues('+')" >+</button>
+            <button class="btn operator" onclick="result()" >=</button>
+            <button class="btn operator" onclick="clearvalues()" >C</button>
+            <button class="btn operator" onclick="backSpace()" >&#9003;</button>
+        </div>
+    </div>
+
+    <script>
+        function appendValues(val) {
+            document.getElementById("display").value += val;
+        }
+        function clearvalues() {
+            document.getElementById("display").value = "";
+        }
+        function backSpace() {
+            let x = document.getElementById("display").value;
+            document.getElementById("display").value = x.slice(0, -1);
+        }
+        function result() {
+            try {
+                let a = eval(document.getElementById("display").value);
+                document.getElementById("display").value = a;
+                console.log(document.getElementById("display").value, a);
+                // backSpace();
+            }
+            catch {
+                alert("Invalid");
+            }
+        }
+        document.addEventListener("keydown", keyboardInput);
+        function keyboardInput(event) {
+            if (event.key === "Enter") {
+                result();
+            }
+            else if (event.key === "Escape") {
+                clearvalues();
+            }
+            else if (event.key === "Backspace") {
+                backSpace();
+            }
+            else if (event.key >= 0 && event.key <= 9) {
+                appendValues(event.key);
+            }
+            else if (event.key === "Delete") {
+                backSpace();
+            }
+            else if (event.key === "." || event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/") {
+                appendValues(event.key)
+            }
+            else if (event.key === "=") {
+                result();
+            }
+        }
+    </script>
+</body>
+
+</html>
