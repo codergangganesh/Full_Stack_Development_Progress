@@ -1,0 +1,118 @@
+<!-- 2. Pricing Plans
+Goal: Create a 3-column pricing table (Basic, Pro, Premium).
+
+Requirements:
+
+Use flex-grow, flex-basis, and flex-shrink
+
+Highlight the "Pro" plan by increasing its size
+
+Use icons or emoji for features
+
+Add CTA (Call-to-Action) buttons -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Plans</title>
+    <style>
+        .card {
+            display: flex;
+            flex-grow: 2;
+            flex-basis: auto;
+            flex-shrink: 1;
+            gap: 3rem;
+            margin-left: 35%;
+            top: 100vh;
+            margin-top: 20%;
+        }
+
+        .basic-container {
+            background-color: rgb(193, 193, 245);
+            border-radius: 2cap;
+        }
+
+        .premium-container {
+            background-color: red;
+            border-radius: 2cap;
+        }
+        .pro-container {
+            background-color: aqua;
+            border-radius: 2cap;
+        }
+
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 20%;
+            text-align: center;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+        h2,
+        p {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+
+        <div class="basic-container">
+            <h2>Basic 🚀</h2>
+            <p>Ideal for beginners</p>
+            <ul>
+                <li>✅tick Limited features</li>
+                <li>✅Email support</li>
+                <li>❌ No premium tools</li>
+            </ul>
+            <button>Get Basic</button>
+        </div>
+
+        <div class="pro-container">
+            <h2>Pro 🔥</h2>
+            <p>Most popular choice!</p>
+            <ul>
+                <li>✅ Advanced features</li>
+                <li>✅ Priority support</li>
+                <li>✅ Premium tools</li>
+            </ul>
+            <button>Go Pro</button>
+        </div>
+
+        <div class="premium-container">
+            <h2>Premium 💎</h2>
+            <p>Best for professionals</p>
+            <ul>
+                <li>✅ All features</li>
+                <li>✅ 24/7 support</li>
+                <li>✅ Exclusive content</li>
+            </ul>
+            <button>Get Premium</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

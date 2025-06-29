@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Enquiry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f7f7f7;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Product Enquiry Form</h2>
+
+<form id="enquiryForm" enctype="multipart/form-data" onsubmit="sendMail(event)">
+  <label for="name">Name*</label>
+  <input type="text" name="name" required>
+
+  <label for="email">Email*</label>
+  <input type="email" name="email" required>
+
+  <label for="phone">Phone*</label>
+  <input type="text" name="phone" required>
+
+  <label for="address">Address*</label>
+  <input type="text" name="address" required>
+
+  <label for="district">District*</label>
+  <select name="district" required>
+    <option value="">Select District</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Tirupur">Tirupur</option>
+    <option value="Salem">Salem</option>
+    <option value="Erode">Erode</option>
+    <option value="Chennai">Chennai</option>
+  </select>
+
+  <label for="enquiry">Enquiry*</label>
+  <textarea name="enquiry" rows="4" required></textarea>
+
+  <label for="productImage">Product Image (optional)</label>
+  <input type="file" >
+
+  <button type="submit">Submit</button>
+
+  <div class="message" id="responseMessage"></div>
+</form>
+
+<script>
+function sendMail(event) {
+  event.preventDefault();
+
+  const form = document.getElementById('enquiryForm');
+  const formData = new FormData(form);
+  const responseMessage = document.getElementById('responseMessage');
+
+  fetch("sendmail.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    responseMessage.textContent = data;
+    form.reset();
+  })
+  .catch(err => {
+    responseMessage.textContent = "An error occurred. Please try again.";
+    console.error(err);
+  });
+}
+</script>
+
+</body>
+</html>
